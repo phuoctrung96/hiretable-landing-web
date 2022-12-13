@@ -1,13 +1,14 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import { ImCheckmark } from 'react-icons/im';
 import { BsDashLg } from 'react-icons/bs';
 
-const ComparationTable = ({ data }) => {
+const ComparationTable: React.FC<{ data: any }> = ({ data }) => {
   return (
     <div className="flex flex-col w-full ">
       <div className="flex items-start  px-4 border-b border-gray-100">
         <div className="w-1/2"></div>
-        {data.map((item, index) => (
+        {data.map((item: any, index: number) => (
           <div
             className="flex-grow text-lg font-semibold text-center w-1/6 mb-3"
             key={index}

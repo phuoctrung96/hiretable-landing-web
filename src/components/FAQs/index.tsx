@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import React from 'react';
 import FAQItem from './FAQItem';
 import { FAQList } from '@/constants/FAQs.content';
-const FAQs = () => {
+const FAQs: React.FC = () => {
   return (
     <div className="flex items-center flex-col sm:px-[74px] sm:py-16 px-2 gap-14">
       <h4 className="text-center ">Frequently asked questions</h4>

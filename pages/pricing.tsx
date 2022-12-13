@@ -1,20 +1,20 @@
-import React from 'react';
-import Card from '@/components/Card';
+import { NextPage } from 'next';
+import PricingPlanCard from '@/components/PricingPlanCard';
 import Header from '@/components/Header';
 import ComparationTable from '@/components/ComparationTable';
-import { PricingList } from '@/constants/Pricing.content';
+import { PricingPlans } from '@/constants/PricingPlans.content';
 
-const pricing = () => {
+const pricing: NextPage = () => {
   return (
     <div>
       <Header />
-      <div className='flex flex-col justify-center items-center mx-32'>
+      <div className="flex flex-col justify-center items-center mx-32">
         <div className="flex gap-5 mb-10">
-          {PricingList.map((item, index) => (
-            <Card key={index} data={item} />
+          {PricingPlans.map((item, index) => (
+            <PricingPlanCard key={index} data={item} />
           ))}
         </div>
-        <ComparationTable data={PricingList} />
+        <ComparationTable data={PricingPlans} />
       </div>
     </div>
   );

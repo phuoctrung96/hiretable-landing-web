@@ -1,4 +1,3 @@
-import { NextPage } from 'next';
 import React, { useState } from 'react';
 import { IoIosAddCircle, IoMdCloseCircle } from 'react-icons/io';
 import Video from '../VideoPlayer';
@@ -6,7 +5,7 @@ interface FAQItemProps {
   title: string;
   desc: string;
 }
-const FAQItem: NextPage<FAQItemProps> = ({ title, desc }) => {
+const FAQItem: React.FC<FAQItemProps> = ({ title, desc }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className=" w-full " onClick={() => setIsOpen(!isOpen)}>

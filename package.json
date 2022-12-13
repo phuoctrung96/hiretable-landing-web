@@ -1,44 +1,35 @@
 {
-    "name": "hiretable-landing-web",
-    "version": "0.1.0",
-    "private": true,
-    "scripts": {
-        "dev": "next dev",
-        "build": "next build",
-        "start": "next start",
-        "lint": "next lint",
-        "storybook": "start-storybook -p 6006",
-        "build-storybook": "build-storybook"
-    },
-    "dependencies": {
-        "@commitlint/cli": "^17.3.0",
-        "@commitlint/config-conventional": "^17.3.0",
-        "@types/node": "18.11.13",
-        "@types/react": "18.0.26",
-        "@types/react-dom": "18.0.9",
-        "autoprefixer": "^10.4.13",
-        "eslint": "8.29.0",
-        "eslint-config-next": "13.0.6",
-        "next": "13.0.6",
-        "postcss": "^8.4.20",
-        "react": "18.2.0",
-        "react-dom": "18.2.0",
-        "react-icons": "^4.7.1",
-        "tailwindcss": "^3.2.4",
-        "typescript": "4.9.4"
-    },
-    "devDependencies": {
-        "@babel/core": "^7.20.5",
-        "@storybook/addon-actions": "^6.5.14",
-        "@storybook/addon-essentials": "^6.5.14",
-        "@storybook/addon-interactions": "^6.5.14",
-        "@storybook/addon-links": "^6.5.14",
-        "@storybook/builder-webpack5": "^6.5.14",
-        "@storybook/manager-webpack5": "^6.5.14",
-        "@storybook/react": "^6.5.14",
-        "@storybook/testing-library": "^0.0.13",
-        "babel-loader": "^8.3.0",
-        "husky": "^8.0.2",
-        "markdownlint": "^0.26.2"
-    }
+  "name": "hiretable-landing-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint:write": "next lint --cache --fix"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css,md}": "prettier --write"
+  },
+  "dependencies": {
+    "@types/node": "18.11.14",
+    "@types/react": "18.0.26",
+    "@types/react-dom": "18.0.9",
+    "eslint": "8.29.0",
+    "eslint-config-next": "13.0.6",
+    "next": "13.0.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.7.1",
+    "typescript": "4.9.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.2",
+    "postcss": "^8.4.20",
+    "prettier": "^2.8.1",
+    "tailwindcss": "^3.2.4"
+  }
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import Item from "../Item";
 import Video from "../VideoPlayer";
-import { HireEasilyData } from "./HireEasily.content";
+import { HireEasilyData } from "../../data/HireEasily.content";
 const HireEasily = () => {
     return (
         <div className="flex flex-col items-center">

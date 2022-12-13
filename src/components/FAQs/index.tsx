@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Item from "../Item";
-import { FAQList } from "./FAQs.content";
+import { FAQList } from "../../data/FAQs.content";
 const FAQs = () => {
     return (
         <div className="flex items-center flex-col sm:px-[74px] sm:py-16 px-2 gap-14">

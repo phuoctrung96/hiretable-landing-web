@@ -7,7 +7,7 @@ import Video from "../components/VideoPlayer";
 import FAQs from "../components/FAQs";
 import Footer from "../components/Footer";
 import HireEasily from "../components/HireEasily";
-import { SwitchButtonList } from "../components/SwitchButton/SwitchButton.content";
+import { SwitchButtonList } from "../data/SwitchButton.content";
 import SwitchButton from "../components/SwitchButton";
 import HassleFreeProcess from "../components/HassleFreeProcess";
 export default function Home() {

@@ -23,7 +23,7 @@ const logoList = [
 ];
 const Logos = () => {
     return (
-        <div className="w-full flex items-center justify-between px-16 py-[74px]">
+        <div className="w-full flex items-center justify-between sm:px-16 py-[74px]">
             {logoList.map((logo, index) => (
                 <Image
                     src={logo.url}

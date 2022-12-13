@@ -1,6 +1,7 @@
 import { NextPage } from "next";
 import React, { useState } from "react";
 import { IoIosAddCircle, IoMdCloseCircle } from "react-icons/io";
+import Video from "../VideoPlayer";
 interface ItemProps {
     title: string;
     desc: string;
@@ -14,7 +15,7 @@ const Item: NextPage<ItemProps> = ({ title, desc }) => {
                     isOpen ? "bg-[#E0E0E0]" : ""
                 }`}
             >
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between mt-5">
                     <p className="font-bold text-xl ">{title}</p>
                     {isOpen ? (
                         <IoMdCloseCircle size={32} />
@@ -23,9 +24,14 @@ const Item: NextPage<ItemProps> = ({ title, desc }) => {
                     )}
                 </div>
                 {isOpen && (
-                    <p className="h-[72px] flex items-center font-medium text-xl">
-                        {desc}
-                    </p>
+                    <div className="flex flex-col items-center sm:items-start">
+                        <p className="h-[72px] flex items-center font-medium text-xl">
+                            {desc}
+                        </p>
+                        <div className="flex sm:hidden">
+                            <Video height={524} width={295} />
+                        </div>
+                    </div>
                 )}
             </div>
         </div>

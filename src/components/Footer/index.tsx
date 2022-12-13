@@ -3,9 +3,9 @@ import React from "react";
 
 const Footer = () => {
     return (
-        <div className="flex flex-col justify-center rounded-tl-full rounded-tr-full bg-black px-[200px]">
+        <div className="flex flex-col justify-center rounded-tl-full rounded-tr-full bg-black sm:px-[200px]">
             <div className="flex flex-col items-center h-[722px] justify-center">
-                <p className="text-white font-bold text-[56px] mb-8">
+                <p className="text-white font-bold text-[40px] sm:text-[56px] mb-8 text-center">
                     Start winning your candidates
                 </p>
                 <Image
@@ -15,9 +15,9 @@ const Footer = () => {
                     height={164}
                 />
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col ml-5">
                 <Image src="/Long.png" alt="logo" width={98} height={34} />
-                <div className="flex items-center justify-between mt-16 mb-16">
+                <div className=" grid  grid-cols-2 sm:grid-cols-4 items-center justify-between mt-16 gap-4 mb-16">
                     <div className="flex flex-col gap-5">
                         <p className="text-[#757575] font-bold text-sm ">
                             CANDIDATES

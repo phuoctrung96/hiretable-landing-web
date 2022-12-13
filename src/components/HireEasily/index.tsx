@@ -2,7 +2,7 @@ import React from 'react';
 import FAQItem from '../FAQs/FAQItem';
 import Video from '../VideoPlayer';
 import { HireEasilyData } from '@/constants/HireEasily.content';
-const HireEasily = () => {
+const HireEasily: React.FC = () => {
   return (
     <div className="flex flex-col items-center">
       <h4 className="sm:px-[74px] sm:py-16 text-center">

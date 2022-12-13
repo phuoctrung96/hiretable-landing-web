@@ -8,7 +8,7 @@ interface SwitchButtonProps {
   data: EnumServiceItems;
 }
 
-const SwitchButton: NextPage<SwitchButtonProps> = ({
+const SwitchButton: React.FC<SwitchButtonProps> = ({
   openTab,
   setOpenTab,
   data

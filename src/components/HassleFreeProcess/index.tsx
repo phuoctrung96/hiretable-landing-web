@@ -6,7 +6,7 @@ import {
 } from 'react-icons/bs';
 import Button from '../shared/Button';
 
-const HassleFreeProcess = () => {
+const HassleFreeProcess: React.FC = () => {
   return (
     <div className="sm:mx-20 mx-5">
       <p className="text-[#212121] text-center font-bold text-[56px] px-[74px] py-16">

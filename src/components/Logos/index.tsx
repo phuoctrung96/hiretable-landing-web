@@ -1,3 +1,4 @@
+import React from 'react';
 import Image from 'next/image';
 const logoList = [
   {
@@ -21,7 +22,7 @@ const logoList = [
     url: '/image5.png'
   }
 ];
-const Logos = () => {
+const Logos: React.FC = () => {
   return (
     <div className="w-full flex items-center justify-between sm:px-16 py-[74px]">
       {logoList.map((logo, index) => (

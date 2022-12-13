@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <div className="flex flex-col justify-center rounded-tl-full rounded-tr-full bg-black sm:px-[200px]">
       <div className="flex flex-col items-center h-[722px] justify-center">

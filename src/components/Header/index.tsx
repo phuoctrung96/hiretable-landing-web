@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { AiOutlineMenu } from 'react-icons/ai';
 import Button from '../shared/Button';
 
@@ -8,9 +9,12 @@ export default function Header() {
       <Image src="/Long.png" alt="logo" width={98} height={30} />
 
       <div className="hidden sm:flex items-center gap-8 ">
-        <span className="text-white font-bold text-base cursor-pointer">
+        <Link
+          className="text-white font-bold text-base cursor-pointer"
+          href="/pricing"
+        >
           Pricing
-        </span>
+        </Link>
         <span className="text-white font-bold text-base cursor-pointer">
           Sign in
         </span>

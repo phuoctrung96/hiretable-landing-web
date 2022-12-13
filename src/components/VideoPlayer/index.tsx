@@ -1,4 +1,3 @@
-import { NextPage } from 'next';
 import Image from 'next/image';
 import React, { useRef, useState } from 'react';
 
@@ -6,7 +5,7 @@ interface VideoProps {
   width: number;
   height: number;
 }
-const Video: NextPage<VideoProps> = ({ width, height }) => {
+const Video: React.FC<VideoProps> = ({ width, height }) => {
   const [isPlay, setIsPlay] = useState(false);
   const videoRef = useRef<HTMLVideoElement>();
   const handlePlay = () => {

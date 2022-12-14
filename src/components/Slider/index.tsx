@@ -15,7 +15,13 @@ function SampleNextArrow(props: any) {
       className="absolute top-1/2 z-10 right-0 transform translate-x-1/2 -translate-y-1/2"
       onClick={onClick}
     >
-      <Image src="/arrow-right.png" alt="icon" width={90} height={90} />
+      <Image
+        src="/arrow-right.png"
+        alt="icon"
+        width={30}
+        height={30}
+        className="sm:w-16 sm:h-16"
+      />
     </button>
   );
 }
@@ -27,7 +33,13 @@ function SamplePrevArrow(props: any) {
       className="absolute z-10 top-1/2 left-0 transform -translate-x-1/2 -translate-y-1/2"
       onClick={onClick}
     >
-      <Image src="/arrow-left.png" alt="icon" width={90} height={90} />
+      <Image
+        src="/arrow-left.png"
+        alt="icon"
+        width={30}
+        height={30}
+        className="sm:w-16 sm:h-16"
+      />
     </button>
   );
 }

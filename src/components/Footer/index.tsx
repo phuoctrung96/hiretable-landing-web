@@ -18,7 +18,7 @@ const Footer: React.FC<FooterProps> = ({ isCircle }) => {
             Start winning your candidates
           </p>
           <Image
-            src="/Frame1570.png"
+            src="/get-started.png"
             alt="logo-footer"
             width={164}
             height={164}

@@ -1,7 +1,7 @@
 import React from 'react';
 import Slider from '../shared/Slider';
-import img1 from '../../../public/Frame3589.png';
-import img2 from '../../../public/Frame1570.png';
+import img1 from '../../../public/slider1.png';
+import img2 from '../../../public/get-started.png';
 import img3 from '../../../public/image3.png';
 
 const HassleFreeProcess: React.FC = () => {

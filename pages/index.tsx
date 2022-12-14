@@ -11,7 +11,7 @@ import { EnumServiceItems } from '@/components/shared/SwitchButton/types';
 import SwitchButton from '@/components/shared/SwitchButton';
 import HassleFreeProcess from '@/components/HassleFreeProcess';
 
-export default function Home() {
+export default function HomePage() {
   const [openTab, setOpenTab] = useState(1);
 
   const SwitchButtonList: EnumServiceItems = [
@@ -83,7 +83,7 @@ export default function Home() {
         <FAQs />
       </main>
 
-      <Footer />
+      <Footer isCircle={true} />
     </div>
   );
 }

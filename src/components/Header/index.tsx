@@ -5,8 +5,10 @@ import Button from '../shared/Button';
 
 export default function Header() {
   return (
-    <header className="flex gap-[10px] px-[74px] py-[17px] items-center justify-between bg-black h-[86px]">
-      <Image src="/Long.png" alt="logo" width={98} height={30} />
+    <header className="flex gap-[10px] px-[74px] py-[17px] items-center justify-between bg-black h-20">
+      <Link href="/">
+        <Image src="/Long.png" alt="logo" width={98} height={30} />
+      </Link>
 
       <div className="hidden sm:flex items-center gap-8 ">
         <Link

@@ -55,7 +55,7 @@ const Slider: React.FC<{ images: any[] }> = ({ images }) => {
         {images.map((item, index) => (
           <div key={index}>
             <div className="flex justify-evenly sm:h-[820px] bg-[#E0E0E0] pb-5 sm:rounded-[128px] rounded-[64px] relative">
-              <div className="hidden sm:flex">
+              <div className="sm:hidden md:hidden lg:hidden xl:flex 2xl:flex">
                 <Image src={item} alt="item" width={539} height={820} />
               </div>
               <div className="flex flex-col">

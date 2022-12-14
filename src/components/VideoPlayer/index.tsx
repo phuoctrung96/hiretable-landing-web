@@ -40,8 +40,9 @@ const Video: React.FC<VideoProps> = ({ width, height }) => {
           videoRef.current = el as HTMLVideoElement;
         }}
         loop
-        muted
         onClick={handlePause}
+        onMouseEnter={handlePlay}
+        onMouseLeave={handlePause}
         className="flex justify-center items-center rounded-[64px] h-full object-cover"
       >
         <source

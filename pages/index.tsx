@@ -26,7 +26,7 @@ export default function HomePage() {
       </Head>
       <Header />
       <main>
-        <div className="rounded-b-[10000px] bg-black h-[1289px]">
+        <div className="rounded-bl-full rounded-br-full bg-[#111111] h-[1289px]">
           <div className="flex items-center flex-col ">
             <p className="text-white font-bold text-[56px] flex-grow-0 text-center">
               <span className="text-[#FCEA10]">Inteview</span> candidates <br />
@@ -60,7 +60,7 @@ export default function HomePage() {
                   width={439.35}
                   height={128}
                   alt="vector"
-                  className="absolute -bottom-60 sm:bottom-0 h-12 w-[164.76px] sm:h-32 sm:w-[439.35px]"
+                  className="absolute -bottom-60 sm:bottom-32 h-12 w-[164.76px] sm:h-32 sm:w-[439.35px]"
                 />
               </div>
 

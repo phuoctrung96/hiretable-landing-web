@@ -1,10 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/router';
+import DealPopUp from '../DealPopUp';
 
 const DealForm: React.FC = () => {
   const router = useRouter();
-
+  const [openPopup, setOpenPopup] = useState(false);
   return (
     <form className="bg-[#FAFAFA] items-center flex flex-col justify-center py-16 px-8 rounded-[64px] shadow-[0_10px_24px_rgba(30,30,30,0.12)]">
       <div className="items-center flex flex-col">
@@ -104,12 +105,15 @@ const DealForm: React.FC = () => {
           understood the HireTable Privacy Policy
         </p>
         <button
-          type="submit"
           className={`text-white mt-5 font-medium sm:font-bold text-sm flex justify-center items-center rounded-[64px] w-[93px]  sm:w-[280px] h-[45px] bg-[#BFBAFF] gap-2 px-3 py-1`}
-          onClick={() => router.push('/deal/made')}
+          onClick={e => {
+            e.preventDefault();
+            setOpenPopup(!openPopup);
+          }}
         >
           Let's make a deal!
         </button>
+        <DealPopUp isOpen={openPopup} setIsOpen={setOpenPopup} />
       </div>
     </form>
   );

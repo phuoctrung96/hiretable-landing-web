@@ -1,8 +1,8 @@
 import React from 'react';
 import Slider from '../shared/Slider';
 import img1 from '../../../public/slider1.png';
-import img2 from '../../../public/get-started.png';
-import img3 from '../../../public/image3.png';
+import img2 from '../../../public/slider2.png';
+import img3 from '../../../public/slider3.png';
 
 const HassleFreeProcess: React.FC = () => {
   const images = [img1, img2, img3];

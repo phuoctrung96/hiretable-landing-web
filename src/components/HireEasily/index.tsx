@@ -14,7 +14,7 @@ const HireEasily: React.FC = () => {
             <FAQItem key={item.id} title={item.title} desc={item.desc} />
           ))}
         </div>
-        <div className="hidden sm:flex">
+        <div className="hidden lg:hidden xl:flex sm:hidden md:hidden">
           <Video height={1002} width={608} />
         </div>
       </div>

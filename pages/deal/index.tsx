@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import DealForm from '@/components/DealForm';
 import { AiOutlineCheck } from 'react-icons/ai';
-import { HiReceiptPercent } from 'react-icons/hi2';
+
 import Image from 'next/image';
 const deal: NextPage = () => {
   return (
@@ -64,7 +64,7 @@ const deal: NextPage = () => {
         </div>
         <DealForm />
       </div>
-      <Footer isCircle={false}/>
+      <Footer isCircle={false} />
     </div>
   );
 };

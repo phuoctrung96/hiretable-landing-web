@@ -1,8 +1,8 @@
+import { NextPage } from 'next';
+import Link from 'next/link';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import Video from '@/components/VideoPlayer';
-import { NextPage } from 'next';
-import Link from 'next/link';
 
 const made: NextPage = () => {
   return (

@@ -1,11 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactSlick from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import img1 from '../../../public/Frame3589.png';
-import img2 from '../../../public/Frame1570.png';
-import img3 from '../../../public/image3.png';
-import Button from '../shared/Button';
+import Button from '../Button';
 
 import Image from 'next/image';
 function SampleNextArrow(props: any) {
@@ -44,7 +41,7 @@ function SamplePrevArrow(props: any) {
   );
 }
 
-const Slider: React.FC = () => {
+const Slider: React.FC<{ images: any[] }> = ({ images }) => {
   const settings = {
     infinite: true,
     slidesToShow: 1,
@@ -52,7 +49,6 @@ const Slider: React.FC = () => {
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />
   };
-  const images = [img1, img2, img3];
   return (
     <div>
       <ReactSlick {...settings}>

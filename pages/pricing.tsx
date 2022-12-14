@@ -9,7 +9,7 @@ import { useState } from 'react';
 import Footer from '@/components/Footer';
 import FAQs from '@/components/FAQs';
 import styles from '../styles/pricing.module.css';
-const pricing: NextPage = () => {
+export default function PricingPage() {
   const SwitchButtonList: EnumServiceItems = [
     { id: 1, title: 'Monthly' },
     { id: 2, title: 'Yearly' }
@@ -41,6 +41,4 @@ const pricing: NextPage = () => {
       <Footer isCircle={true} />
     </div>
   );
-};
-
-export default pricing;
+}

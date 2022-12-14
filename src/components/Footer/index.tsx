@@ -5,9 +5,7 @@ interface FooterProps {
   isCircle: boolean;
 }
 
-
-const Footer: React.FC<FooterProps> = ({isCircle}) => {
-  
+const Footer: React.FC<FooterProps> = ({ isCircle }) => {
   return (
     <div
       className={`flex flex-col justify-center ${

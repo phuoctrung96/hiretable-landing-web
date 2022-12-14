@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { AiOutlineCheck } from 'react-icons/ai';
 import { HiReceiptPercent } from 'react-icons/hi2';
 import Card from '../shared/Card';
@@ -79,9 +80,12 @@ const PricingPlanCard: React.FC<{ data: any }> = ({ data }) => {
       {data.type === 2 && (
         <div className="flex items-center justify-center w-full mt-5">
           <HiReceiptPercent color="#5043FF" size={24} />
-          <p className="text-[#5043FF] decoration-dashed underline underline-offset-8 font-medium text-sm">
+          <Link
+            href="/deal"
+            className="text-[#5043FF] decoration-dashed underline underline-offset-8 font-medium text-sm"
+          >
             Or, let's make a deal
-          </p>
+          </Link>
         </div>
       )}
     </Card>

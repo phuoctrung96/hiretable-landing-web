@@ -83,7 +83,7 @@ export default function Home() {
         <FAQs />
       </main>
 
-      <Footer />
+      <Footer isCircle={true} />
     </div>
   );
 }

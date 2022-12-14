@@ -3,19 +3,42 @@ import PricingPlanCard from '@/components/PricingPlanCard';
 import Header from '@/components/Header';
 import ComparationTable from '@/components/ComparationTable';
 import { PricingPlans } from '@/constants/PricingPlans.content';
-
+import SwitchButton from '@/components/shared/SwitchButton';
+import { EnumServiceItems } from '@/components/shared/SwitchButton/types';
+import { useState } from 'react';
+import Footer from '@/components/Footer';
+import FAQs from '@/components/FAQs';
+import styles from '../styles/pricing.module.css';
 const pricing: NextPage = () => {
+  const SwitchButtonList: EnumServiceItems = [
+    { id: 1, title: 'Monthly' },
+    { id: 2, title: 'Yearly' }
+  ];
+  const [openTab, setOpenTab] = useState(1);
+
   return (
     <div>
       <Header />
-      <div className="flex flex-col justify-center items-center mx-32">
-        <div className="flex gap-5 mb-10">
+      <main className={styles.bg}>
+        <p className="text-white font-bold text-[56px] flex-grow-0 text-center mx-20 pt-16 pb-3">
+          Simple pricing.
+          <span className="text-[#FCEA10]">Happy hiring.</span>
+        </p>
+        <p className="text-white">Choose a best plan which suits your needs.</p>
+        <SwitchButton
+          data={SwitchButtonList}
+          openTab={openTab}
+          setOpenTab={setOpenTab}
+        />
+        <div className="flex flex-col sm:flex-row gap-16 mb-10 mt-16  items-center justify-evenly">
           {PricingPlans.map((item, index) => (
             <PricingPlanCard key={index} data={item} />
           ))}
         </div>
-        <ComparationTable data={PricingPlans} />
-      </div>
+      </main>
+      <ComparationTable data={PricingPlans} />
+      <FAQs />
+      <Footer isCircle={true} />
     </div>
   );
 };

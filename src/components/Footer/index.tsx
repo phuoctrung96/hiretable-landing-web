@@ -17,12 +17,24 @@ const Footer: React.FC<FooterProps> = ({ isCircle }) => {
           <p className="text-white font-bold text-[40px] sm:text-[56px] mb-8 text-center">
             Start winning your candidates
           </p>
-          <Image
-            src="/get-started.png"
-            alt="logo-footer"
-            width={164}
-            height={164}
-          />
+          <div className="flex h-[164px] w-[164px] items-center relative">
+            <span>
+              <Image
+                src="/text-arrow-get-started.svg"
+                className="absolute animate-spin"
+                alt="logo-footer"
+                width={164}
+                height={164}
+              />
+              <Image
+                src="/arrow-get-started.svg"
+                className="absolute"
+                alt="logo-footer"
+                width={164}
+                height={164}
+              />
+            </span>
+          </div>
         </div>
       )}
       <div className="flex flex-col ml-5 pt-5">

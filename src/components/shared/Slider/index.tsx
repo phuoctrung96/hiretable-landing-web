@@ -13,7 +13,7 @@ function SampleNextArrow(props: any) {
       onClick={onClick}
     >
       <Image
-        src="/arrow-right.png"
+        src="/arrow-right.svg"
         alt="icon"
         width={30}
         height={30}
@@ -31,7 +31,7 @@ function SamplePrevArrow(props: any) {
       onClick={onClick}
     >
       <Image
-        src="/arrow-left.png"
+        src="/arrow-left.svg"
         alt="icon"
         width={30}
         height={30}

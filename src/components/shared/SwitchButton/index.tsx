@@ -1,6 +1,6 @@
 import { NextPage } from 'next';
 import React from 'react';
-import { EnumServiceItems } from './types';
+import { EnumServiceItems } from '@/constants/types';
 
 interface SwitchButtonProps {
   openTab: number;

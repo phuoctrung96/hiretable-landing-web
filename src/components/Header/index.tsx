@@ -5,7 +5,7 @@ import Button from '../shared/Button';
 
 export default function Header() {
   return (
-    <header className="sticky z-50 top-0 flex gap-[10px] px-[74px] py-[17px] items-center justify-between bg-[#111111] h-20">
+    <header className="sticky z-40 top-0 flex gap-[10px] px-[74px] py-[17px] items-center justify-between bg-[#111111] h-20">
       <Link href="/">
         <Image src="/Long.png" alt="logo" width={98} height={30} />
       </Link>

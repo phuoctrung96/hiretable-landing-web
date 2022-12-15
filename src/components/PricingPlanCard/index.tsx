@@ -1,14 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import React from 'react';
 import { AiOutlineCheck } from 'react-icons/ai';
 import { HiReceiptPercent } from 'react-icons/hi2';
 import Card from '../shared/Card';
-import DealPopUp from '../DealPopUp';
 
 const PricingPlanCard: React.FC<{ data: any }> = ({ data }) => {
-  const [openPopup, setOpenPopup] = useState(false);
 
   const bgColor =
     data.type === 1
@@ -56,11 +54,11 @@ const PricingPlanCard: React.FC<{ data: any }> = ({ data }) => {
         </p>
       </div>
       <div className="w-full my-8">
-        <button
+        <Link href={`${data.type===3 && "/customize"}`}
           className={`${bgBtn} w-full font-medium text-sm flex justify-center items-center rounded-[32px]  h-[45px] ${textBtnColor} `}
         >
           {data.titleBtn}
-        </button>
+        </Link>
       </div>
       <div className="w-full">
         {data.includes.map((item: any, index: number) => (
@@ -80,17 +78,16 @@ const PricingPlanCard: React.FC<{ data: any }> = ({ data }) => {
           </div>
         ))}
       </div>
-      <DealPopUp isOpen={openPopup} setIsOpen={setOpenPopup} />
       {data.type === 2 && (
-        <div
+        <Link
           className="flex items-center justify-center w-full mt-5 cursor-pointer"
-          onClick={() => setOpenPopup(!openPopup)}
+          href="/deal"
         >
           <HiReceiptPercent color="#5043FF" size={24} />
           <p className="text-[#5043FF] decoration-dashed underline underline-offset-8 font-medium text-sm">
             Or, let's make a deal
           </p>
-        </div>
+        </Link>
       )}
     </Card>
   );

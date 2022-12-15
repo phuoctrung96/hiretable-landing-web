@@ -1,5 +1,6 @@
 import { PricingPlans } from '@/constants/PricingPlans.content';
 import React from 'react';
+import DealForm from '../DealForm';
 import PricingPlanCard from '../PricingPlanCard';
 
 interface DealPopUpProps {
@@ -9,7 +10,7 @@ interface DealPopUpProps {
 
 const DealPopUp: React.FC<DealPopUpProps> = ({ isOpen, setIsOpen }) => {
   return (
-    <>
+    <div className="z-50">
       {!isOpen ? null : (
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -24,12 +25,10 @@ const DealPopUp: React.FC<DealPopUpProps> = ({ isOpen, setIsOpen }) => {
         } ease-in-out duration-300`}
       >
         <div className="flex flex-col sm:flex-row gap-16 mb-10 mt-16 p-10  items-center justify-evenly ">
-          {PricingPlans.map((item, index) => (
-            <PricingPlanCard key={index} data={item} />
-          ))}
+          <DealForm />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

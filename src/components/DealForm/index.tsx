@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { useState } from 'react';
 import { useRouter } from 'next/router';
-import DealPopUp from '../DealPopUp';
+import React, { useState } from 'react';
 
 const DealForm: React.FC = () => {
   const router = useRouter();
@@ -106,14 +105,9 @@ const DealForm: React.FC = () => {
         </p>
         <button
           className={`text-white mt-5 font-medium sm:font-bold text-sm flex justify-center items-center rounded-[64px] w-[93px]  sm:w-[280px] h-[45px] bg-[#BFBAFF] gap-2 px-3 py-1`}
-          onClick={e => {
-            e.preventDefault();
-            setOpenPopup(!openPopup);
-          }}
         >
           Let's make a deal!
         </button>
-        <DealPopUp isOpen={openPopup} setIsOpen={setOpenPopup} />
       </div>
     </form>
   );

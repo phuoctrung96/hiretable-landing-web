@@ -1,10 +1,10 @@
 import { NextPage } from 'next';
 import Link from 'next/link';
-import Footer from '@/components/Footer';
-import Header from '@/components/Header';
-import Video from '@/components/VideoPlayer';
+import { Footer } from 'components/Footer';
+import { Header } from 'components/Header';
+import { Video } from 'components/shared/VideoPlayer';
 
-const made: NextPage = () => {
+const DealMade: NextPage = () => {
   return (
     <div>
       <Header />
@@ -35,4 +35,4 @@ const made: NextPage = () => {
   );
 };
 
-export default made;
+export default DealMade;

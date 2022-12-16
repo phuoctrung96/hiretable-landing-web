@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 
+export type Direction = 'right' | 'left';
+
 interface InfiniteLooperProps {
   speed: number;
-  direction: 'right' | 'left';
+  direction: Direction;
   children: React.ReactNode;
   isShow: boolean;
 }
@@ -83,4 +85,4 @@ const InfiniteLooper: React.FC<InfiniteLooperProps> = ({
   );
 };
 
-export default InfiniteLooper;
+export { InfiniteLooper };

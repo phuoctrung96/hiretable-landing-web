@@ -1,12 +1,12 @@
 import React from 'react';
 import { NextPage } from 'next';
-import Footer from '@/components/Footer';
-import Header from '@/components/Header';
-import DealForm from '@/components/DealForm';
+import Image from 'next/image';
+import { Footer } from 'components/Footer';
+import { Header } from 'components/Header';
+import { DealForm } from 'components/DealForm';
 import { AiOutlineCheck } from 'react-icons/ai';
 
-import Image from 'next/image';
-const customize: NextPage = () => {
+const Customize: NextPage = () => {
   return (
     <div>
       <Header />
@@ -69,4 +69,4 @@ const customize: NextPage = () => {
   );
 };
 
-export default customize;
+export default Customize;

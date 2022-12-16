@@ -1,6 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { IoIosAddCircle, IoMdCloseCircle } from 'react-icons/io';
-import Video from '../VideoPlayer';
+import { Video } from '../shared/VideoPlayer';
+export interface FAQItemType {
+  id: number;
+  title: string;
+  desc: string;
+}
 interface FAQItemProps {
   title: string;
   desc: string;
@@ -51,4 +56,4 @@ const FAQItem: React.FC<FAQItemProps> = ({
   );
 };
 
-export default FAQItem;
+export { FAQItem };

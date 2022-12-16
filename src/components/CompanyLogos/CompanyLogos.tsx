@@ -1,28 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
-const logoList = [
-  {
-    id: 1,
-    url: '/image1.png'
-  },
-  {
-    id: 2,
-    url: '/image2.png'
-  },
-  {
-    id: 3,
-    url: '/image3.png'
-  },
-  {
-    id: 4,
-    url: '/image4.png'
-  },
-  {
-    id: 5,
-    url: '/image5.png'
-  }
-];
-const Logos: React.FC = () => {
+import { logoList } from './CompanyLogos.content';
+
+const CompanyLogos: React.FC = () => {
   return (
     <div className="w-full flex items-center justify-between sm:px-16 py-[74px]">
       {logoList.map((logo, index) => (
@@ -38,4 +18,4 @@ const Logos: React.FC = () => {
   );
 };
 
-export default Logos;
+export { CompanyLogos };

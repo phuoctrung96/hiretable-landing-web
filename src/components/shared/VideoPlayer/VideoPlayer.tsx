@@ -76,4 +76,4 @@ const Video: React.FC<VideoProps> = ({ width, height, url }) => {
   );
 };
 
-export default Video;
+export { Video };

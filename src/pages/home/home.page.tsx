@@ -1,24 +1,20 @@
 import Head from 'next/head';
+import { NextPage } from 'next';
 import Image from 'next/image';
 import { useState } from 'react';
-import Header from '@/components/Header';
-import Logos from '@/components/Logos';
-import Video from '@/components/VideoPlayer';
-import FAQs from '@/components/FAQs';
-import Footer from '@/components/Footer';
-import HireEasily from '@/components/HireEasily';
-import { EnumServiceItems } from '@/constants/types';
-import SwitchButton from '@/components/shared/SwitchButton';
-import HassleFreeProcess from '@/components/HassleFreeProcess';
-import InfiniteLooper from '@/components/InfiniteLooper';
+import { Header } from 'components/Header';
+import { CompanyLogos } from 'components/CompanyLogos';
+import { Video } from 'components/shared/VideoPlayer';
+import { FAQs } from 'components/FAQs';
+import { Footer } from 'components/Footer';
+import { HireEasily } from 'components/HireEasily';
+import { SwitchButton } from 'components/shared/SwitchButton';
+import { HassleFreeProcess } from 'components/HassleFreeProcess';
+import { InfiniteLooper } from 'components/shared/InfiniteLooper';
+import { SwitchButtonList, InfiniteLooperContent } from './home.content';
 
-export default function HomePage() {
+const Home: NextPage = () => {
   const [openTab, setOpenTab] = useState(1);
-
-  const SwitchButtonList: EnumServiceItems = [
-    { id: 1, title: 'Candidates' },
-    { id: 2, title: 'Employers' }
-  ];
 
   return (
     <div>
@@ -78,133 +74,30 @@ export default function HomePage() {
                 id="link2"
               >
                 <div className="rounded-bl-full rounded-br-full h-[977px] overflow-hidden">
-                  <InfiniteLooper
-                    speed={4}
-                    direction="right"
-                    isShow={openTab === 2}
-                  >
-                    <div className="contentBlock">
-                      <Image
-                        className="rounded"
-                        alt="Avatar"
-                        src="/avatar1.jpg"
-                        height={192}
-                        width={192}
-                      />
-                    </div>
-                    <div className="contentBlock">
-                      <Image
-                        className="rounded"
-                        alt="Avatar"
-                        src="/avatar2.jpg"
-                        height={192}
-                        width={192}
-                      />
-                    </div>
-                    <div className="contentBlock">
-                      <Image
-                        className="rounded"
-                        alt="Avatar"
-                        src="/avatar3.jpg"
-                        height={192}
-                        width={192}
-                      />
-                    </div>
-                    <div className="contentBlock">
-                      <Image
-                        className="rounded"
-                        alt="Avatar"
-                        src="/avatar4.jpg"
-                        height={192}
-                        width={192}
-                      />
-                    </div>
-                  </InfiniteLooper>
-
-                  <InfiniteLooper
-                    direction="right"
-                    speed={2}
-                    isShow={openTab === 2}
-                  >
-                    <div className="contentBlock">
-                      <Image
-                        className="rounded"
-                        alt="Avatar"
-                        src="/avatar1.jpg"
-                        height={192}
-                        width={192}
-                      />
-                    </div>
-                    <div className="contentBlock">
-                      <Image
-                        className="rounded"
-                        alt="Avatar"
-                        src="/avatar2.jpg"
-                        height={192}
-                        width={192}
-                      />
-                    </div>
-                    <div className="contentBlock">
-                      <Image
-                        className="rounded"
-                        alt="Avatar"
-                        src="/avatar3.jpg"
-                        height={192}
-                        width={192}
-                      />
-                    </div>
-                    <div className="contentBlock">
-                      <Image
-                        className="rounded"
-                        alt="Avatar"
-                        src="/avatar4.jpg"
-                        height={192}
-                        width={192}
-                      />
-                    </div>
-                  </InfiniteLooper>
-                  <InfiniteLooper
-                    direction="right"
-                    speed={3}
-                    isShow={openTab === 2}
-                  >
-                    <div className="contentBlock">
-                      <Image
-                        className="rounded"
-                        alt="Avatar"
-                        src="/avatar1.jpg"
-                        height={192}
-                        width={192}
-                      />
-                    </div>
-                    <div className="contentBlock">
-                      <Image
-                        className="rounded"
-                        alt="Avatar"
-                        src="/avatar2.jpg"
-                        height={192}
-                        width={192}
-                      />
-                    </div>
-                    <div className="contentBlock">
-                      <Image
-                        className="rounded"
-                        alt="Avatar"
-                        src="/avatar3.jpg"
-                        height={192}
-                        width={192}
-                      />
-                    </div>
-                    <div className="contentBlock">
-                      <Image
-                        className="rounded"
-                        alt="Avatar"
-                        src="/avatar4.jpg"
-                        height={192}
-                        width={192}
-                      />
-                    </div>
-                  </InfiniteLooper>
+                  {InfiniteLooperContent.map((item, index) => (
+                    <InfiniteLooper
+                      key={`infinite-${index}`}
+                      speed={item.speed}
+                      direction={item.direction}
+                      isShow={openTab === 2}
+                    >
+                      {item.images &&
+                        item.images.map((image, idx) => (
+                          <div
+                            className="contentBlock"
+                            key={`infinite-${index}-${idx}`}
+                          >
+                            <Image
+                              className="rounded"
+                              alt="Avatar"
+                              src={image.url}
+                              height={192}
+                              width={192}
+                            />
+                          </div>
+                        ))}
+                    </InfiniteLooper>
+                  ))}
                 </div>
                 <div className="flex items-center justify-center gap-16 absolute left-1/2 -top-[12px] -translate-x-1/2">
                   <Video
@@ -217,7 +110,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <Logos />
+        <CompanyLogos />
         <HassleFreeProcess />
         <HireEasily />
         <FAQs />
@@ -226,4 +119,6 @@ export default function HomePage() {
       <Footer isCircle={true} />
     </div>
   );
-}
+};
+
+export default Home;

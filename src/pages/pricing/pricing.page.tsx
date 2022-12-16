@@ -1,19 +1,15 @@
+import React, { useState } from 'react';
 import { NextPage } from 'next';
-import PricingPlanCard from '@/components/PricingPlanCard';
-import Header from '@/components/Header';
-import ComparationTable from '@/components/ComparationTable';
-import { PricingPlans } from '@/constants/PricingPlans.content';
-import SwitchButton from '@/components/shared/SwitchButton';
-import { EnumServiceItems } from '@/constants/types';
-import { useState } from 'react';
-import Footer from '@/components/Footer';
-import FAQs from '@/components/FAQs';
-import styles from '../styles/pricing.module.css';
-export default function PricingPage() {
-  const SwitchButtonList: EnumServiceItems = [
-    { id: 1, title: 'Monthly' },
-    { id: 2, title: 'Yearly' }
-  ];
+import { PricingPlanCard } from 'components/PricingPlanCard';
+import { Header } from 'components/Header';
+import { ComparationTable } from 'components/ComparationTable';
+import { SwitchButton } from 'components/shared/SwitchButton';
+import { Footer } from 'components/Footer';
+import { FAQs } from 'components/FAQs';
+import { SwitchButtonList, PricingPlans } from './pricing.content';
+import styles from 'styles/pricing.module.css';
+
+const Pricing: NextPage = () => {
   const [openTab, setOpenTab] = useState(1);
 
   return (
@@ -41,4 +37,6 @@ export default function PricingPage() {
       <Footer isCircle={true} />
     </div>
   );
-}
+};
+
+export default Pricing;

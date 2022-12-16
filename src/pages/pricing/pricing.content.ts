@@ -1,3 +1,10 @@
+import { EnumServiceItems } from 'components/shared/SwitchButton';
+
+export const SwitchButtonList: EnumServiceItems = [
+  { id: 1, title: 'Monthly' },
+  { id: 2, title: 'Yearly' }
+];
+
 export const PricingPlans = [
   {
     id: 1,

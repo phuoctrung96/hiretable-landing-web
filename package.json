@@ -9,7 +9,7 @@
     "lint:write": "next lint --cache --fix"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,css,md}": "prettier --write"
+    "src/**/*.{js,jsx,ts,tsx,css,md}": "prettier --write"
   },
   "dependencies": {
     "@next/font": "^13.0.6",

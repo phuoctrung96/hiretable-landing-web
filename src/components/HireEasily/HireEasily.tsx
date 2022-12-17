@@ -21,7 +21,7 @@ const HireEasily: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center mx-2">
       <h4 className="sm:px-[74px] sm:py-16 text-center">
         Hire easily with HireTable.
       </h4>
@@ -29,6 +29,7 @@ const HireEasily: React.FC = () => {
         <div className="flex flex-col sm:mr-16 sm:w-[614px] gap-2">
           {HireEasilyData.map((item, index) => (
             <FAQItem
+              isVideo={true}
               key={item.id}
               title={item.title}
               desc={item.desc}

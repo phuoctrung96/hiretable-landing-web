@@ -18,6 +18,7 @@ const FAQs: React.FC = () => {
           title={item.title}
           desc={item.desc}
           item={item}
+          isVideo={false}
           selectedFAQItem={selectedFAQItem}
           handleClick={() => handleItemClick(item)}
         />

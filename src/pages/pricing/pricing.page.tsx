@@ -70,11 +70,7 @@ const Pricing: NextPage = () => {
           <span className="text-[#FCEA10]">Happy hiring.</span>
         </p>
         <p className="text-white">Choose a best plan which suits your needs.</p>
-        <SwitchButton
-          data={SwitchButtonList}
-          openTab={openTab}
-          setOpenTab={setOpenTab}
-        />
+        <SwitchButton data={SwitchButtonList} />
         <div className="flex flex-col sm:flex-row gap-16 mb-10 mt-16  items-center justify-evenly">
           {PricingPlans.map((item, index) => (
             <PricingPlanCard key={index} data={item} />

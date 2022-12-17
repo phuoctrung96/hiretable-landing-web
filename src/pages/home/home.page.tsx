@@ -8,10 +8,71 @@ import { Video } from 'components/shared/VideoPlayer';
 import { FAQs } from 'components/FAQs';
 import { Footer } from 'components/Footer';
 import { HireEasily } from 'components/HireEasily';
-import { SwitchButton } from 'components/shared/SwitchButton';
+import { SwitchButton, EnumServiceItems } from 'components/shared/SwitchButton';
 import { HassleFreeProcess } from 'components/HassleFreeProcess';
-import { InfiniteLooper } from 'components/shared/InfiniteLooper';
-import { SwitchButtonList, InfiniteLooperContent } from './home.content';
+import { InfiniteLooper, Direction } from 'components/shared/InfiniteLooper';
+
+const SwitchButtonList: EnumServiceItems = [
+  { id: 1, title: 'Candidates' },
+  { id: 2, title: 'Employers' }
+];
+
+const InfiniteLooperContent = [
+  {
+    speed: 60,
+    direction: 'right' as Direction,
+    images: [
+      {
+        url: '/avatar1.jpg'
+      },
+      {
+        url: '/avatar2.jpg'
+      },
+      {
+        url: '/avatar3.jpg'
+      },
+      {
+        url: '/avatar4.jpg'
+      }
+    ]
+  },
+  {
+    speed: 80,
+    direction: 'right' as Direction,
+    images: [
+      {
+        url: '/avatar1.jpg'
+      },
+      {
+        url: '/avatar2.jpg'
+      },
+      {
+        url: '/avatar3.jpg'
+      },
+      {
+        url: '/avatar4.jpg'
+      }
+    ]
+  },
+  {
+    speed: 70,
+    direction: 'right' as Direction,
+    images: [
+      {
+        url: '/avatar1.jpg'
+      },
+      {
+        url: '/avatar2.jpg'
+      },
+      {
+        url: '/avatar3.jpg'
+      },
+      {
+        url: '/avatar4.jpg'
+      }
+    ]
+  }
+];
 
 const Home: NextPage = () => {
   const [openTab, setOpenTab] = useState(1);

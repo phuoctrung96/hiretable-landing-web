@@ -21,12 +21,12 @@ const FAQItem: React.FC<FAQItemProps> = ({
   handleClick
 }) => {
   return (
-    <div className="w-full" onClick={() => handleClick()}>
+    <div className="w-full cursor-pointer" onClick={() => handleClick()}>
       <div
-        className={`w-full rounded-[128px] p-8 gap-1 transform  hover:bg-gray-400 ease-in-out duration-300 ${
+        className={`w-full rounded-[64px] p-8 gap-1 transform transition duration-200 ease-linear ${
           item?.id === selectedFAQItem?.id
-            ? 'bg-[#E0E0E0] translate-y-0'
-            : '-translate-y-2'
+            ? 'bg-[#E0E0E0] translate-y-0 '
+            : '-translate-y-2 hover:bg-[#FCEA10]'
         }`}
       >
         <div className="flex items-center justify-between">

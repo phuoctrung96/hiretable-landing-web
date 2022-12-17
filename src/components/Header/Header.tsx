@@ -37,14 +37,14 @@ const Header: React.FC = () => {
 
       <div className="hidden sm:flex items-center justify-end gap-8 flex-1 ">
         <Link
-          className="text-white font-medium text-base cursor-pointer"
+          className="text-white font-medium text-base cursor-pointer hover:text-[#FCEA10]"
           href="/pricing"
         >
           Pricing
         </Link>
-        <span className="text-white font-medium text-base cursor-pointer">
+        <Link className="text-white font-medium text-base cursor-pointer hover:text-[#FCEA10]" href="/signin">
           Sign in
-        </span>
+        </Link>
         <Button
           title="Get Started"
           bg="bg-[#5043FF]"

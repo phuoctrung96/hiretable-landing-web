@@ -2,9 +2,9 @@ import React from 'react';
 import { IoIosAddCircle, IoMdCloseCircle } from 'react-icons/io';
 import { Video } from '../shared/VideoPlayer';
 export interface FAQItemType {
-  id: number;
-  title: string;
-  desc: string;
+  id?: number;
+  title?: string;
+  desc?: string;
 }
 interface FAQItemProps {
   title: string;
@@ -25,7 +25,7 @@ const FAQItem: React.FC<FAQItemProps> = ({
   return (
     <div className="w-full cursor-pointer" onClick={() => handleClick()}>
       <div
-        className={`w-full rounded-[64px] p-8 gap-1 transform transition duration-200 ease-linear ${
+        className={`w-full rounded-[64px] p-8 gap-1 transform transition duration-400 ease-out ${
           item?.id === selectedFAQItem?.id
             ? 'bg-[#E0E0E0] translate-y-0 '
             : '-translate-y-2 hover:bg-[#FCEA10]'

@@ -6,7 +6,11 @@ const FAQs: React.FC = () => {
   const [selectedFAQItem, setSelectedFAQItem] = useState<FAQItemType>();
 
   const handleItemClick = (faqItem: any) => {
-    setSelectedFAQItem(faqItem);
+    if (faqItem === selectedFAQItem) {
+      setSelectedFAQItem({});
+    } else {
+      setSelectedFAQItem(faqItem);
+    }
   };
 
   return (

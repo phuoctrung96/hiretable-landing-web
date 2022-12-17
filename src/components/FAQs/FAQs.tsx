@@ -6,11 +6,7 @@ const FAQs: React.FC = () => {
   const [selectedFAQItem, setSelectedFAQItem] = useState<FAQItemType>();
 
   const handleItemClick = (faqItem: any) => {
-    if (faqItem === selectedFAQItem) {
-      setSelectedFAQItem({});
-    } else {
-      setSelectedFAQItem(faqItem);
-    }
+    setSelectedFAQItem(faqItem);
   };
 
   return (
@@ -22,7 +18,6 @@ const FAQs: React.FC = () => {
           title={item.title}
           desc={item.desc}
           item={item}
-          isVideo={false}
           selectedFAQItem={selectedFAQItem}
           handleClick={() => handleItemClick(item)}
         />

@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { NextPage } from 'next';
 import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import { Header } from 'components/Header';
 import { CompanyLogos } from 'components/CompanyLogos';
 import { Video } from 'components/shared/VideoPlayer';
@@ -11,7 +11,6 @@ import { HireEasily } from 'components/HireEasily';
 import { SwitchButton, EnumServiceItems } from 'components/shared/SwitchButton';
 import { HassleFreeProcess } from 'components/HassleFreeProcess';
 import { InfiniteLooper, Direction } from 'components/shared/InfiniteLooper';
-import { useTabContext } from 'contexts/TabContentProvider';
 
 const SwitchButtonList: EnumServiceItems = [
   { id: 1, title: 'Candidates' },
@@ -76,7 +75,7 @@ const InfiniteLooperContent = [
 ];
 
 const Home: NextPage = () => {
-  const { tab, setTab } = useTabContext();
+  const [openTab, setOpenTab] = useState(1);
 
   return (
     <div>
@@ -87,17 +86,19 @@ const Home: NextPage = () => {
       <main>
         <div className="rounded-bl-full rounded-br-full bg-[#111111] h-[1289px]">
           <div className="flex items-center flex-col ">
-            <p className="text-white font-bold text-[56px] leading-[150%] flex-grow-0 text-center">
+            <p className="text-white font-bold text-[56px] flex-grow-0 text-center">
               <span className="text-[#FCEA10]">Inteview</span> candidates <br />
               with <span className="text-[#FCEA10]">video</span> responses
             </p>
-            <div className="mt-16">
-              <SwitchButton data={SwitchButtonList} />
-            </div>
+            <SwitchButton
+              openTab={openTab}
+              setOpenTab={setOpenTab}
+              data={SwitchButtonList}
+            />
             <div className="relative w-full mt-5">
               <div
                 className={
-                  tab === 1
+                  openTab === 1
                     ? 'flex items-center justify-center gap-16 '
                     : 'hidden'
                 }
@@ -130,7 +131,7 @@ const Home: NextPage = () => {
               </div>
 
               <div
-                className={tab === 2 ? 'block relative mt-5' : 'hidden'}
+                className={openTab === 2 ? 'block relative mt-5' : 'hidden'}
                 id="link2"
               >
                 <div className="rounded-bl-full rounded-br-full h-[977px] overflow-hidden">
@@ -139,7 +140,7 @@ const Home: NextPage = () => {
                       key={`infinite-${index}`}
                       speed={item.speed}
                       direction={item.direction}
-                      isShow={tab === 2}
+                      isShow={openTab === 2}
                     >
                       {item.images &&
                         item.images.map((image, idx) => (

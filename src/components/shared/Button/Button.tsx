@@ -10,7 +10,7 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({ color, title, size, bg }) => {
   return (
     <button
-      className={`${color} font-medium text-${size} leading-[150%] flex justify-center items-center rounded-[64px]  h-[54px] ${bg} gap-2 px-4 py-3`}
+      className={`${color} ml-1 font-medium sm:font-bold text-${size} flex justify-center items-center rounded-[64px] w-[93px]  sm:w-[179.67px] h-[54px] ${bg} gap-2 px-3 py-1`}
     >
       {title}
     </button>

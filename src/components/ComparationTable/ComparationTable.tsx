@@ -5,7 +5,7 @@ import { BsDashLg } from 'react-icons/bs';
 
 const ComparationTable: React.FC<{ data: any }> = ({ data }) => {
   return (
-    <div className="hidden sm:flex flex-col w-full px-[74px]">
+    <div className="hidden sm:flex flex-col max-w-[1200px] m-auto py-16">
       <div className="flex items-start  px-4 border-b border-gray-100">
         <div className="w-1/2"></div>
         {data.map((item: any, index: number) => (

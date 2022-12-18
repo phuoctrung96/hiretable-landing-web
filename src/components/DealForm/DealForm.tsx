@@ -6,7 +6,7 @@ const DealForm: React.FC = () => {
   const router = useRouter();
 
   return (
-    <form className="bg-[#FAFAFA] items-center flex flex-col justify-center py-16 px-8 rounded-[64px] shadow-[0_10px_24px_rgba(30,30,30,0.12)]">
+    <form className="bg-[#FAFAFA] items-center flex flex-1 flex-col py-16 px-[84px] justify-center rounded-[64px] shadow-[0_10px_24px_rgba(30,30,30,0.12)]">
       <div className="items-center flex flex-col">
         <div className="mb-6 w-full">
           <label className="block mb-2 text-sm font-medium text-[#757575]">

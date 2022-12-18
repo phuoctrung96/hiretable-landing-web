@@ -36,8 +36,8 @@ const Video: React.FC<VideoProps> = ({ width, height, url }) => {
   };
   return (
     <div
-      className="relative group"
-      style={{ height: `${height}px`, width: `${width}px` }}
+      className="relative group aspect-9/16"
+      style={{height: `${height}px`}}
     >
       {!isUseButton ? (
         <button

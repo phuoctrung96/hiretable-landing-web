@@ -78,15 +78,15 @@ const Home: NextPage = () => {
   const { tab } = useTabContext();
 
   return (
-    <div>
+    <div className='flex flex-col h-screen'>
       <Head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
       <Header />
-      <main>
+      <main className='flex-auto pt-20'>
         <div className="rounded-bl-full rounded-br-full bg-[#111111] h-[1289px]">
-          <div className="flex items-center flex-col ">
-            <p className="text-white font-bold text-[56px] leading-[150%] flex-grow-0 text-center">
+          <div className="flex items-center flex-col max-w-[1200px] m-auto">
+            <p className="text-white font-bold text-[56px] leading-[150%] flex-grow-0 text-center pt-16">
               <span className="text-[#FCEA10]">Inteview</span> candidates <br />
               with <span className="text-[#FCEA10]">video</span> responses
             </p>

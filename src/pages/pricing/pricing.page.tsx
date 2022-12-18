@@ -59,26 +59,30 @@ const PricingPlans = [
 ];
 
 const Pricing: NextPage = () => {
-  const [openTab, setOpenTab] = useState(1);
-
   return (
-    <div>
+    <div className='flex flex-col h-screen'>
       <Header />
-      <main className={styles.bg}>
-        <p className="text-white font-bold text-[56px] flex-grow-0 text-center mx-20 pt-16 pb-3">
-          Simple pricing.
-          <span className="text-[#FCEA10]">Happy hiring.</span>
-        </p>
-        <p className="text-white">Choose a best plan which suits your needs.</p>
-        <SwitchButton data={SwitchButtonList} />
-        <div className="flex flex-col sm:flex-row gap-16 mb-10 mt-16  items-center justify-evenly">
-          {PricingPlans.map((item, index) => (
-            <PricingPlanCard key={index} data={item} />
-          ))}
+      <main className='flex-auto pt-20'>
+        <div className={styles.bg}>
+          <div className="max-w-[1200px] m-auto flex flex-col items-center">
+            <p className="text-white font-bold text-[56px] flex-grow-0 text-center pt-16">
+              Simple pricing.
+              <span className="text-[#FCEA10]">Happy hiring.</span>
+            </p>
+            <p className="text-white mt-3 mb-16">
+              Choose a best plan which suits your needs.
+            </p>
+            <SwitchButton data={SwitchButtonList} />
+            <div className="flex flex-col sm:flex-row gap-16 mb-10 mt-16  items-center justify-evenly">
+              {PricingPlans.map((item, index) => (
+                <PricingPlanCard key={index} data={item} />
+              ))}
+            </div>
+          </div>
         </div>
+        <ComparationTable data={PricingPlans} />
+        <FAQs />
       </main>
-      <ComparationTable data={PricingPlans} />
-      <FAQs />
       <Footer isCircle={true} />
     </div>
   );

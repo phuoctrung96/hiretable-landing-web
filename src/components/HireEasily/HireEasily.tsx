@@ -25,12 +25,12 @@ const HireEasily: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center mx-2">
+    <div className="flex flex-col items-center max-w-[1200px] m-auto">
       <h4 className="sm:px-[74px] sm:py-16 text-center">
         Hire easily with HireTable.
       </h4>
       <div className="flex-align-justify-center ">
-        <div className="flex flex-col sm:mr-16 sm:w-[614px] gap-2">
+        <div className="flex flex-col sm:w-[614px] gap-2">
           {HireEasilyData.map((item, index) => (
             <FAQItem
               isVideo={true}

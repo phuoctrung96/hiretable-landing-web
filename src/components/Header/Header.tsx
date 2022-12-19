@@ -24,8 +24,8 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', onScroll);
   }, [scrollTop]);
   return (
-    <header className="fixed w-full top-0 py-[17px] bg-[#111111] h-20 z-50" >
-      <div className='max-w-[1200px] flex gap-[10px] items-center justify-between m-auto'>
+    <header className="fixed w-full top-0 py-[17px] bg-[#111111] h-20 z-50">
+      <div className="max-w-[1200px] flex gap-[10px] items-center justify-between m-auto">
         <Link href="/" className="flex-1">
           <Image src="/logo.svg" alt="logo" width={98} height={30} />
         </Link>

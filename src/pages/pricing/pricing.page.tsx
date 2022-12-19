@@ -60,9 +60,9 @@ const PricingPlans = [
 
 const Pricing: NextPage = () => {
   return (
-    <div className='flex flex-col h-screen'>
+    <div className="flex flex-col h-screen">
       <Header />
-      <main className='flex-auto pt-20'>
+      <main className="flex-auto pt-20">
         <div className={styles.bg}>
           <div className="max-w-[1200px] m-auto flex flex-col items-center">
             <p className="text-white font-bold text-[56px] flex-grow-0 text-center pt-16">

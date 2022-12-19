@@ -14,7 +14,7 @@ const FAQs: React.FC = () => {
   };
 
   return (
-    <div className="flex items-center flex-col sm:px-[74px] sm:py-16 px-2">
+    <div className="flex items-center flex-col max-w-[1200px] m-auto sm:py-16 ">
       <h4 className="text-center mb-5">Frequently asked questions</h4>
       {FAQList.map((item, index) => (
         <FAQItem

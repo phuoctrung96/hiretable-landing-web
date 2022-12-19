@@ -24,39 +24,41 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', onScroll);
   }, [scrollTop]);
   return (
-    <header className="sticky z-40 top-0 flex gap-[10px] px-[74px] py-[17px] items-center justify-between bg-[#111111] h-20">
-      <Link href="/" className="flex-1">
-        <Image src="/logo.svg" alt="logo" width={98} height={30} />
-      </Link>
-      {scrollTop >= 300 && (
-        <div className="hidden sm:flex">
-          <SwitchButton data={SwitchButtonList} />
-        </div>
-      )}
+    <header className="fixed w-full top-0 py-[17px] bg-[#111111] h-20 z-50">
+      <div className="max-w-[1200px] flex gap-[10px] items-center justify-between m-auto">
+        <Link href="/" className="flex-1">
+          <Image src="/logo.svg" alt="logo" width={98} height={30} />
+        </Link>
+        {scrollTop >= 300 && (
+          <div className="hidden sm:flex">
+            <SwitchButton data={SwitchButtonList} />
+          </div>
+        )}
 
-      <div className="hidden sm:flex items-center justify-end gap-8 flex-1">
-        <Link
-          className="text-white font-medium text-base cursor-pointer hover:text-[#FCEA10]"
-          href="/pricing"
-        >
-          Pricing
-        </Link>
-        <Link
-          className="text-white font-medium text-base cursor-pointer hover:text-[#FCEA10]"
-          href="/signin"
-        >
-          Sign in
-        </Link>
-        <Button
-          title="Get Started"
-          bg="bg-[#5043FF]"
-          color="text-[#ffffff]"
-          size="base"
-        />
+        <div className="hidden sm:flex items-center justify-end gap-8 flex-1">
+          <Link
+            className="text-white font-medium text-base cursor-pointer hover:text-[#FCEA10]"
+            href="/pricing"
+          >
+            Pricing
+          </Link>
+          <Link
+            className="text-white font-medium text-base cursor-pointer hover:text-[#FCEA10]"
+            href="/signin"
+          >
+            Sign in
+          </Link>
+          <Button
+            title="Get Started"
+            bg="bg-[#5043FF]"
+            color="text-[#ffffff]"
+            size="base"
+          />
+        </div>
+        <button className="flex sm:hidden">
+          <AiOutlineMenu color="white" size={46} />
+        </button>
       </div>
-      <button className="flex sm:hidden">
-        <AiOutlineMenu color="white" size={46} />
-      </button>
     </header>
   );
 };

@@ -8,6 +8,9 @@ module.exports = {
     extend: {
       animation: {
         'spin-slow': 'spin 3s linear infinite'
+      },
+      aspectRatio: {
+        '9/16': '9/16'
       }
     }
   },

@@ -8,11 +8,11 @@ import { AiOutlineCheck } from 'react-icons/ai';
 
 const Customize: NextPage = () => {
   return (
-    <div>
+    <div className="flex flex-col h-screen">
       <Header />
-      <div className="flex sm:flex-row flex-col items-start justify-evenly px-4 sm:px-20 py-16">
-        <div className="flex flex-col justify-start sm:w-[618px] mb-8">
-          <p className=" font-bold sm:text-[106px] text-[40px] flex-grow-0 text-center sm:text-left">
+      <main className="flex flex-auto mt-20 sm:flex-row flex-col items-start justify-between max-w-[1200px] mx-auto py-16 gap-[74px]">
+        <div className="flex flex-col justify-start flex-1 mb-8 ">
+          <p className=" font-bold sm:text-[106px] text-[40px] flex-grow-0 text-center sm:text-left leading-[150%] whitespace-nowrap">
             Customize
           </p>
           <p className="font-medium text-xl my-8">
@@ -63,7 +63,7 @@ const Customize: NextPage = () => {
           </div>
         </div>
         <DealForm />
-      </div>
+      </main>
       <Footer isCircle={false} />
     </div>
   );

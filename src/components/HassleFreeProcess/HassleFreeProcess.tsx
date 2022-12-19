@@ -4,7 +4,7 @@ import { HassleFreeProcessData } from './HassleFreeProcess.content';
 
 const HassleFreeProcess: React.FC = () => {
   return (
-    <div className="sm:mx-20 mx-5">
+    <div className="max-w-[1200px] m-auto">
       <p className="text-[#212121] text-center font-bold text-[56px] px-[74px] py-16">
         Hassle free process
       </p>

@@ -10,11 +10,11 @@ import { HireEasily } from 'components/HireEasily';
 import { SwitchButton, EnumServiceItems } from 'components/shared/SwitchButton';
 import { HassleFreeProcess } from 'components/HassleFreeProcess';
 import { InfiniteLooper, Direction } from 'components/shared/InfiniteLooper';
-import { useTabContext } from 'contexts/TabContentProvider';
+import { useCommonContext } from 'contexts/CommonContext';
 
 const SwitchButtonList: EnumServiceItems = [
-  { id: 1, title: 'Candidates' },
-  { id: 2, title: 'Employers' }
+  { label: 'Candidates', value: 'candidates' },
+  { label: 'Employers', value: 'employers' }
 ];
 
 const InfiniteLooperContent = [
@@ -75,7 +75,10 @@ const InfiniteLooperContent = [
 ];
 
 const Home: NextPage = () => {
-  const { tab } = useTabContext();
+  const { selectedRole, setSelectedRole } = useCommonContext();
+  const handleChangeRole = (role: string) => {
+    setSelectedRole(role);
+  };
 
   return (
     <div className="flex flex-col h-screen">
@@ -91,12 +94,16 @@ const Home: NextPage = () => {
               with <span className="text-[#FCEA10]">video</span> responses
             </p>
             <div className="mt-16">
-              <SwitchButton data={SwitchButtonList} />
+              <SwitchButton
+                data={SwitchButtonList}
+                handleChange={role => handleChangeRole(role)}
+                value={selectedRole}
+              />
             </div>
             <div className="relative w-full mt-5">
               <div
                 className={
-                  tab === 1
+                  selectedRole === 'candidates'
                     ? 'flex items-center justify-center gap-16 '
                     : 'hidden'
                 }
@@ -129,7 +136,11 @@ const Home: NextPage = () => {
               </div>
 
               <div
-                className={tab === 2 ? 'block relative mt-5' : 'hidden'}
+                className={
+                  selectedRole === 'employers'
+                    ? 'block relative mt-5'
+                    : 'hidden'
+                }
                 id="link2"
               >
                 <div className="rounded-bl-full rounded-br-full h-[977px] overflow-hidden">
@@ -138,7 +149,7 @@ const Home: NextPage = () => {
                       key={`infinite-${index}`}
                       speed={item.speed}
                       direction={item.direction}
-                      isShow={tab === 2}
+                      isShow={selectedRole === 'employers'}
                     >
                       {item.images &&
                         item.images.map((image, idx) => (

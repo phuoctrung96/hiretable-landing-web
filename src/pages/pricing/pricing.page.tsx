@@ -9,8 +9,8 @@ import { FAQs } from 'components/FAQs';
 import styles from 'styles/pricing.module.css';
 
 const SwitchButtonList: EnumServiceItems = [
-  { id: 1, title: 'Monthly' },
-  { id: 2, title: 'Yearly' }
+  { label: 'Monthly', value: 'monthly' },
+  { label: 'Yearly', value: 'yearly' }
 ];
 
 const PricingPlans = [
@@ -59,6 +59,10 @@ const PricingPlans = [
 ];
 
 const Pricing: NextPage = () => {
+  const [selectedPeriod, setSelectedPeriod] = useState('monthly');
+  const handleChangePlanPeriod = (period: string) => {
+    setSelectedPeriod(period);
+  };
   return (
     <div className="flex flex-col h-screen">
       <Header />
@@ -72,7 +76,11 @@ const Pricing: NextPage = () => {
             <p className="text-white mt-3 mb-16">
               Choose a best plan which suits your needs.
             </p>
-            <SwitchButton data={SwitchButtonList} />
+            <SwitchButton
+              data={SwitchButtonList}
+              handleChange={period => handleChangePlanPeriod(period)}
+              value={selectedPeriod}
+            />
             <div className="flex flex-col sm:flex-row gap-16 mb-10 mt-16  items-center justify-evenly">
               {PricingPlans.map((item, index) => (
                 <PricingPlanCard key={index} data={item} />

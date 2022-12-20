@@ -13,7 +13,7 @@ const DealForm: React.FC = () => {
             How much are you willing to pay per month? *
           </label>
           <div className="relative">
-            <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+            <div className="flex absolute inset-y-0 left-0 items-center pointer-events-none">
               <span className="w-6 h-6 text-gray-500 ">$</span>
             </div>
             <input
@@ -28,7 +28,7 @@ const DealForm: React.FC = () => {
             How many locations do you have for your restaurant? *
           </label>
           <div className="relative">
-            <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+            <div className="flex absolute inset-y-0 left-0 items-center pointer-events-none">
               <span className="w-6 h-6 text-gray-500 ">$</span>
             </div>
             <input

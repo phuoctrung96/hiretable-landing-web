@@ -34,7 +34,7 @@ const PricingPlanCard: React.FC<{ data: any }> = ({ data }) => {
           <p className={`font-bold text-3xl ${textCardColor}`}>{data.title}</p>
           {data.type === 2 && (
             <button
-              className={`bg-[#BFBAFF] py-2 px-3 w-16 font-medium text-sm flex justify-center items-center rounded-[40px] h-[34px] text-[#1C1689] `}
+              className={`bg-[#BFBAFF] py-2 px-3 font-medium text-sm flex justify-center items-center rounded-[40px] h-[34px] w-[68px] text-[#1C1689] `}
             >
               Popular
             </button>

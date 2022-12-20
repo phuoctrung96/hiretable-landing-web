@@ -1,18 +1,23 @@
-import React, { useEffect, useRef } from 'react';
-import { useTabContext } from 'contexts/TabContentProvider';
+import React from 'react';
 
 export interface SwitchButtonItem {
-  id: number;
-  title: string;
+  label: string;
+  value: string;
 }
 export interface EnumServiceItems extends Array<SwitchButtonItem> {}
 interface SwitchButtonProps {
   data: EnumServiceItems;
   switchBtnRef?: any;
+  handleChange: (value: string) => void;
+  value: string;
 }
 
-const SwitchButton: React.FC<SwitchButtonProps> = ({ data, switchBtnRef }) => {
-  const { tab, setTab } = useTabContext();
+const SwitchButton: React.FC<SwitchButtonProps> = ({
+  data,
+  switchBtnRef,
+  handleChange,
+  value
+}) => {
   return (
     <ul
       className="bg-[#212121] text-sm  rounded-full inline-flex"
@@ -20,23 +25,23 @@ const SwitchButton: React.FC<SwitchButtonProps> = ({ data, switchBtnRef }) => {
       ref={switchBtnRef}
     >
       {data?.map(item => (
-        <li className=" flex-auto text-center" key={item.id}>
+        <li className=" flex-auto text-center" key={item.value}>
           <a
             className={
               'text-base leading-[150%] font-medium px-8 py-3  rounded-full block  ' +
-              (tab === item.id
+              (value === item.value
                 ? 'text-[#212121] bg-[#FCEA10]'
                 : 'text-[#757575] bg-none')
             }
             onClick={e => {
               e.preventDefault();
-              setTab(item.id);
+              handleChange(item.value);
             }}
             data-toggle="tab"
             href="#link1"
             role="tablist"
           >
-            {item.title}
+            {item.label}
           </a>
         </li>
       ))}

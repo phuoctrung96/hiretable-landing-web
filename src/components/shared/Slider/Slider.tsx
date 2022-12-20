@@ -46,7 +46,7 @@ const Slider: React.FC<{ images: any[] }> = ({ images }) => {
         <div className="flex flex-col w-[327px] sm:w-[539px] h-full">
           <div className="flex items-center justify-between sm:mt-[74px] mt-6 px-2">
             <button
-              className={`text-[#090909] font-bold w-[93px] sm:w-[180px] text-medium leading-[150%] flex justify-center items-center rounded-[64px]  h-[54px] ${
+              className={`text-[#090909] font-medium w-[93px] sm:w-[180px] text-medium leading-[150%] flex justify-center items-center rounded-[64px]  h-[54px] ${
                 indexCurrent === 0 && ' bg-[#FCEA10]'
               } gap-2 px-7 sm:px-14 py-3  `}
               onClick={() => setIndexCurrent(0)}
@@ -54,7 +54,7 @@ const Slider: React.FC<{ images: any[] }> = ({ images }) => {
               Post
             </button>
             <button
-              className={`text-[#090909] font-bold w-[93px] sm:w-[180px] text-medium leading-[150%] flex justify-center items-center rounded-[64px]  h-[54px] ${
+              className={`text-[#090909] font-medium w-[93px] sm:w-[180px] text-medium leading-[150%] flex justify-center items-center rounded-[64px]  h-[54px] ${
                 indexCurrent === 1 && ' bg-[#FCEA10]'
               } gap-2 px-7 sm:px-14 py-3`}
               onClick={() => setIndexCurrent(1)}
@@ -62,7 +62,7 @@ const Slider: React.FC<{ images: any[] }> = ({ images }) => {
               Review
             </button>
             <button
-              className={`text-[#090909] font-bold w-[93px] sm:w-[180px] text-medium leading-[150%] flex justify-center items-center rounded-[64px]  h-[54px] ${
+              className={`text-[#090909] font-medium w-[93px] sm:w-[180px] text-medium leading-[150%] flex justify-center items-center rounded-[64px]  h-[54px] ${
                 indexCurrent === 2 && ' bg-[#FCEA10]'
               } gap-2 px-7 sm:px-14 py-3`}
               onClick={() => setIndexCurrent(2)}

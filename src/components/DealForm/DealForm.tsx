@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
-import axios from 'axios';
+import axios from '../../services/api';
 
 const DealForm: React.FC = () => {
   const router = useRouter();
@@ -19,7 +19,7 @@ const DealForm: React.FC = () => {
 
   const submitData = async (e: any) => {
     e.preventDefault();
-    axios.post('http://localhost:1337/api/custom/create', values).then((res: any) => {
+    axios.post('/custom/create', values).then((res: any) => {
       if (res.data && res.data.status !== false) {
         router.push('/deal/made');
       } else {

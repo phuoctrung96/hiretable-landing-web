@@ -71,7 +71,7 @@ const DealForm: React.FC = () => {
                 handleInputChange('price', event.target.value)
               }
               value={values.price}
-              className="text-sm text-[#757575] bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer block w-full pl-10 p-2.5 "
+              className="text-sm text-[#757575] bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer block w-full pl-3 p-2.5 "
             />
           </div>
         </div>
@@ -91,7 +91,7 @@ const DealForm: React.FC = () => {
                 handleInputChange('locationCount', event.target.value)
               }
               value={values.locationCount}
-              className="text-sm text-[#757575] bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer block w-full pl-10 p-2.5 "
+              className="text-sm text-[#757575] bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer block w-full pl-3 p-2.5 "
             />
           </div>
         </div>

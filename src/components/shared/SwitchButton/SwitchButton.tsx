@@ -20,7 +20,7 @@ const SwitchButton: React.FC<SwitchButtonProps> = ({
 }) => {
   return (
     <ul
-      className="bg-[#212121] text-sm  rounded-full inline-flex"
+      className="bg-[#212121] text-sm py-3 rounded-full inline-flex"
       role="tablist"
       ref={switchBtnRef}
     >
@@ -28,7 +28,7 @@ const SwitchButton: React.FC<SwitchButtonProps> = ({
         <li className=" flex-auto text-center" key={item.value}>
           <a
             className={
-              'text-base leading-[150%] font-medium px-8 py-3  rounded-full block  ' +
+              'text-base leading-[24px] sm:leading-[150%] font-medium px-8 py-3 rounded-full inline-block' +
               (value === item.value
                 ? 'text-[#212121] bg-[#FCEA10]'
                 : 'text-[#757575] bg-none')

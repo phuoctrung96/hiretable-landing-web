@@ -39,7 +39,7 @@ const Slider: React.FC<{ images: any[] }> = ({ images }) => {
   };
 
   return (
-    <div className="flex sm:h-[820px] bg-[#E0E0E0] sm:rounded-[128px] rounded-[64px] relative">
+    <div className="flex sm:h-[820px] bg-[#E0E0E0] sm:rounded-[128px] rounded-[64px] relative mx-4">
       <button
         className="absolute z-10 top-1/2 left-0 transform -translate-x-1/2 -translate-y-1/2"
         onClick={prevSliderHandler}

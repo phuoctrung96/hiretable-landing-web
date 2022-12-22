@@ -52,11 +52,7 @@ const HireEasily: React.FC = () => {
               {selectedFAQItem?.subTitle}
             </span>
           </div>
-          <Video
-            height={1002}
-            width={608}
-            url={selectedFAQItem?.videoUrl || defaultVideoUrl}
-          />
+          <Video url={selectedFAQItem?.videoUrl || defaultVideoUrl} />
         </div>
       </div>
     </div>

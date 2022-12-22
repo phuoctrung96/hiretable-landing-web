@@ -12,7 +12,7 @@ const Footer: React.FC<FooterProps> = ({ isCircle }) => {
     <footer
       className={`flex flex-col justify-center ${
         isCircle && 'rounded-tl-full rounded-tr-full'
-      } bg-[#111111] sm:px-[74px]`}
+      } bg-[#111111] sm:px-[74px] px-4`}
     >
       {isCircle && (
         <div className="flex flex-col items-center h-[722px] justify-center">

@@ -44,8 +44,8 @@ const FAQItem: React.FC<FAQItemProps> = ({
             <p className="h-[72px] flex items-center font-medium text-xl">
               {desc}
             </p>
-            <div className={`${isVideo && 'flex'} sm:hidden my-3`}>
-              <Video height={524} width={295} url={selectedFAQItem?.videoUrl} />
+            <div className={`${isVideo ? 'flex' : 'hidden'} sm:hidden my-3`}>
+              <Video url={selectedFAQItem?.videoUrl} />
             </div>
           </div>
         )}

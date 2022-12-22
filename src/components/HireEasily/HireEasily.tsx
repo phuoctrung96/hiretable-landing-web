@@ -29,8 +29,8 @@ const HireEasily: React.FC = () => {
       <h4 className="sm:px-[74px] sm:py-16 text-center">
         Hire easily with HireTable.
       </h4>
-      <div className="flex-align-justify-center ">
-        <div className="flex flex-col sm:w-[614px] gap-2">
+      <div className="flex items-center justify-center">
+        <div className="flex flex-1 flex-col sm:max-w-[600px] gap-2">
           {HireEasilyData.map((item, index) => (
             <FAQItem
               isVideo={true}
@@ -43,7 +43,15 @@ const HireEasily: React.FC = () => {
             />
           ))}
         </div>
-        <div className="hidden lg:hidden xl:flex sm:hidden md:hidden">
+        <div className="relative flex-1 hidden lg:hidden xl:flex sm:hidden md:hidden ml-[70px] w-full">
+          <div className="absolute z-30 top-0 left-1 flex flex-col p-8 gap-3">
+            <span className="font-bold text-[#fafafa] text-[32px] leading-[150%]">
+              {selectedFAQItem?.title}
+            </span>
+            <span className="font-bold text-[#fafafa] text-xl leading-[150%]">
+              {selectedFAQItem?.subTitle}
+            </span>
+          </div>
           <Video
             height={1002}
             width={608}

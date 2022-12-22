@@ -180,7 +180,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-        <div className='mx-2'>
+        <div className="mx-2">
           <CompanyLogos />
           <HassleFreeProcess />
           <HireEasily />

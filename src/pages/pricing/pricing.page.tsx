@@ -88,7 +88,7 @@ const Pricing: NextPage = () => {
             </div>
           </div>
         </div>
-        <div className='mx-2'>
+        <div className="mx-2">
           <ComparationTable data={PricingPlans} />
           <FAQs />
         </div>

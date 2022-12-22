@@ -58,7 +58,7 @@ const Header: React.FC = () => {
             />
           </div>
         )}
-        
+
         <div className="hidden sm:flex items-center justify-end gap-8 flex-1">
           {selectedRole === 'employers' && (
             <Link

@@ -88,8 +88,10 @@ const Pricing: NextPage = () => {
             </div>
           </div>
         </div>
-        <ComparationTable data={PricingPlans} />
-        <FAQs />
+        <div className='mx-2'>
+          <ComparationTable data={PricingPlans} />
+          <FAQs />
+        </div>
       </main>
       <Footer isCircle={true} />
     </div>

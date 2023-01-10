@@ -7,6 +7,7 @@ export interface FAQItemType {
   desc?: string;
 }
 interface FAQItemProps {
+  elemId?: string;
   title: string;
   desc: string;
   selectedFAQItem: any;
@@ -15,6 +16,7 @@ interface FAQItemProps {
   isVideo: boolean;
 }
 const FAQItem: React.FC<FAQItemProps> = ({
+  elemId,
   title,
   desc,
   selectedFAQItem,
@@ -23,27 +25,37 @@ const FAQItem: React.FC<FAQItemProps> = ({
   isVideo
 }) => {
   return (
-    <div className="w-full cursor-pointer" onClick={() => handleClick()}>
+    <div
+      id={elemId}
+      className="w-full cursor-pointer"
+      onClick={() => handleClick()}
+    >
       <div
-        className={`w-full rounded-[32px] p-8 gap-1 transform transition duration-400 ease-out ${
+        className={`w-full rounded-[64px] px-6 sm:px-8 py-8 gap-1 transform transition duration-400 ease-out ${
           item?.id === selectedFAQItem?.id
-            ? 'bg-[#E0E0E0] translate-y-0'
-            : '-translate-y-2 hover:bg-[#FCEA10]'
+            ? 'bg-[#E0E0E0] translate-y-0 py-6'
+            : 'hover:bg-[#FCEA10] py-7'
         }`}
       >
         <div className="flex items-center justify-between">
-          <p className="font-bold text-xl ">{title}</p>
-          {item?.id === selectedFAQItem?.id ? (
-            <IoMdCloseCircle size={32} />
-          ) : (
-            <IoIosAddCircle size={32} color="#757575" />
-          )}
+          <p
+            className={`font-bold text-xl ${
+              item?.id === selectedFAQItem?.id ? 'mb-4' : ''
+            }`}
+          >
+            {title}
+          </p>
+          <span className="w-10">
+            {item?.id === selectedFAQItem?.id ? (
+              <IoMdCloseCircle size={40} />
+            ) : (
+              <IoIosAddCircle size={40} color="#757575" />
+            )}
+          </span>
         </div>
         {item?.id === selectedFAQItem?.id && (
           <div className="flex flex-col items-center sm:items-start">
-            <p className="h-[72px] flex items-center font-medium text-xl">
-              {desc}
-            </p>
+            <p className="flex items-center font-medium text-xl">{desc}</p>
             <div className={`${isVideo ? 'flex' : 'hidden'} sm:hidden my-3`}>
               <Video url={selectedFAQItem?.videoUrl} />
             </div>

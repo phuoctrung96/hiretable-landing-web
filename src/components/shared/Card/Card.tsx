@@ -6,7 +6,7 @@ const Card: React.FC<{
 }> = ({ className, children }) => {
   return (
     <div
-      className={`flex flex-col h-[560px] items-start  w-[344px] rounded-[64px] p-8 ${className}`}
+      className={`flex flex-col h-[560px] items-start w-[344px] rounded-[64px] p-8 ${className}`}
     >
       {children}
     </div>

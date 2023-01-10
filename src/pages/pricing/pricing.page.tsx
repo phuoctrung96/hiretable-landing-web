@@ -6,6 +6,7 @@ import { ComparationTable } from 'components/ComparationTable';
 import { SwitchButton, EnumServiceItems } from 'components/shared/SwitchButton';
 import { Footer } from 'components/Footer';
 import { FAQs } from 'components/FAQs';
+import { Tooltip } from 'components/shared/Tooltip';
 import styles from 'styles/pricing.module.css';
 
 const SwitchButtonList: EnumServiceItems = [
@@ -69,7 +70,7 @@ const Pricing: NextPage = () => {
       <main className="flex-auto pt-20">
         <div className={styles.bg}>
           <div className="max-w-[1200px] m-auto flex flex-col items-center">
-            <p className="text-white font-bold text-[56px] flex-grow-0 text-center pt-16">
+            <p className="text-white font-bold text-[28px] sm:text-[44px] flex-grow-0 text-center pt-16">
               Simple pricing.
               <span className="text-[#FCEA10]">Happy hiring.</span>
             </p>

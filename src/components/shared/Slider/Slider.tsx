@@ -39,9 +39,9 @@ const Slider: React.FC<{ images: any[] }> = ({ images }) => {
   };
 
   return (
-    <div className="flex sm:h-[820px] bg-[#E0E0E0] sm:rounded-[128px] rounded-[64px] relative mx-4">
+    <div className="flex sm:h-[820px] bg-[#E0E0E0] rounded-[64px] relative mx-4">
       <button
-        className="absolute z-10 top-1/2 left-0 transform -translate-x-1/2 -translate-y-1/2"
+        className="absolute z-10 top-1/2 left-0 transform -translate-x-1/2 -translate-y-1/2 hidden sm:block"
         onClick={prevSliderHandler}
       >
         <Image
@@ -53,7 +53,7 @@ const Slider: React.FC<{ images: any[] }> = ({ images }) => {
         />
       </button>
       <div
-        className="hidden sm:hidden sm:flex-1 items-end justify-center md:hidden lg:hidden xl:flex 2xl:flex"
+        className="hidden sm:hidden sm:flex-auto items-end justify-center md:hidden lg:hidden xl:flex 2xl:flex pl-8"
         ref={slideRef}
       >
         <Image
@@ -65,27 +65,27 @@ const Slider: React.FC<{ images: any[] }> = ({ images }) => {
       </div>
       <div className="flex flex-col flex-1 items-center justify-center">
         <div className="flex flex-col w-[327px] sm:w-[539px] h-full">
-          <div className="flex items-center justify-between sm:mt-[74px] mt-6 px-2">
+          <div className="flex items-center justify-between sm:justify-start sm:mt-[74px] mt-6 px-3 sm:px-5">
             <button
-              className={`text-[#090909] transition duration-200 ease-in-out font-medium w-[93px] sm:w-[180px] text-medium leading-[150%] flex justify-center items-center rounded-[64px]  h-[54px] ${
+              className={`text-[#090909] transition duration-200 ease-in-out font-medium text-sm sm:text-base leading-[150%] flex justify-center items-center rounded-[64px] ${
                 indexCurrent === 0 && ' bg-[#FCEA10]'
-              } gap-2 px-7 sm:px-14 py-3  `}
+              } px-7 sm:px-14 py-3`}
               onClick={() => setIndexCurrent(0)}
             >
               Post
             </button>
             <button
-              className={`text-[#090909] transition duration-200 ease-in-out font-medium w-[93px] sm:w-[180px] text-medium leading-[150%] flex justify-center items-center rounded-[64px]  h-[54px] ${
+              className={`text-[#090909] transition duration-200 ease-in-out font-medium text-sm sm:text-base leading-[150%] flex justify-center items-center rounded-[64px] ${
                 indexCurrent === 1 && ' bg-[#FCEA10]'
-              } gap-2 px-7 sm:px-14 py-3`}
+              } px-7 sm:px-14 py-3`}
               onClick={() => setIndexCurrent(1)}
             >
               Review
             </button>
             <button
-              className={`text-[#090909] transition duration-200 ease-in-out font-medium w-[93px] sm:w-[180px] text-medium leading-[150%] flex justify-center items-center rounded-[64px]  h-[54px] ${
+              className={`text-[#090909] transition duration-200 ease-in-out font-medium text-sm sm:text-base leading-[150%] flex justify-center items-center rounded-[64px] ${
                 indexCurrent === 2 && ' bg-[#FCEA10]'
-              } gap-2 px-7 sm:px-14 py-3`}
+              } px-7 sm:px-14 py-3`}
               onClick={() => setIndexCurrent(2)}
             >
               Message
@@ -93,21 +93,23 @@ const Slider: React.FC<{ images: any[] }> = ({ images }) => {
           </div>
           <div
             ref={contentRef}
-            className="flex-1 flex items-start justify-center flex-col w-full h-full pb-6 px-2"
+            className="flex-1 flex items-start justify-center flex-col w-full h-full pt-4 sm:pt-0 pb-20 sm:pb-14 px-6"
           >
-            <p className="font-bold  sm:text-[56px] leading-[150%] mb-3 sm:mb-8 text-base break-normal">
+            <p className="font-bold sm:text-[44px] leading-[150%] mb-3 sm:mb-8 text-base break-normal">
               {images[indexCurrent].title}
             </p>
             {images[indexCurrent].content.length > 1 ? (
               <ul className="px-6" style={{ listStyleType: 'disc' }}>
                 {images[indexCurrent].content.map(
                   (item: string, index: number) => (
-                    <li key={index}>{item}</li>
+                    <li key={index} className="text-sm sm:text-base">
+                      {item}
+                    </li>
                   )
                 )}
               </ul>
             ) : (
-              <p className="text-xl font-normal leading-[150%] px-6">
+              <p className="text-sm sm:text-base font-normal leading-[150%]">
                 {images[indexCurrent].content[0]}
               </p>
             )}
@@ -116,7 +118,7 @@ const Slider: React.FC<{ images: any[] }> = ({ images }) => {
       </div>
       <button
         onClick={nextSliderHandler}
-        className="absolute top-1/2 z-10 right-0 transform translate-x-1/2 -translate-y-1/2"
+        className="absolute top-1/2 z-10 right-0 transform translate-x-1/2 -translate-y-1/2 hidden sm:block"
       >
         <Image
           src="/arrow-right.svg"

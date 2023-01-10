@@ -55,7 +55,7 @@ const PricingPlanCard: React.FC<{ data: any }> = ({ data }) => {
       <div className="w-full my-8">
         <Link
           href={`${data.type === 3 && '/customize'}`}
-          className={`${bgBtn} w-full font-medium text-sm flex justify-center items-center rounded-[32px]  h-[45px] ${textBtnColor} `}
+          className={`${bgBtn} w-full font-medium text-sm flex justify-center items-center rounded-[32px] h-[45px] ${textBtnColor} `}
         >
           {data.titleBtn}
         </Link>

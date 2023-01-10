@@ -3,15 +3,23 @@ import React from 'react';
 interface TooltipProps {
   children: React.ReactNode;
   text: string;
+  bgColor: string;
+  color: string;
 }
 
-const Tooltip: React.FC<TooltipProps> = ({ text, children }) => {
+const Tooltip: React.FC<TooltipProps> = ({
+  text,
+  color,
+  bgColor,
+  children
+}) => {
   return (
-    <span className="group relative">
-      <span className="pointer-events-none absolute -top-10 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-black px-2 py-1 text-white opacity-0 transition before:absolute before:left-1/2 before:top-full before:-translate-x-1/2 before:border-4 before:border-transparent before:border-t-black before:content-[''] group-hover:opacity-100">
+    <span className="group relative inline-block">
+      <span
+        className={`absolute hidden group-hover:flex top-20 -left-20 whitespace-nowrap -translate-y-full px-2 py-1 bg-[${bgColor}] rounded-md text-center text-[${color}] text-base after:content-[''] after:absolute after:left-1/2 after:-top-4 before:-translate-x-1/2 after:border-8 after:border-x-transparent after:border-t-transparent after:border-b-[${bgColor}]`}
+      >
         {text}
       </span>
-
       {children}
     </span>
   );

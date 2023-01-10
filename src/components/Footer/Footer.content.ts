@@ -55,7 +55,7 @@ export const FooterContent = [
       {
         name: 'Joinus',
         className: 'items-center flex',
-        subName: 'HHIRING',
+        subName: 'HIRING',
         subClassName:
           'text-[#090909] ml-1 font-bold text-[8px] flex justify-center items-center rounded-3xl w-14 h-5 bg-[#FCEA10] gap-2 px-3 py-1',
         url: '/'

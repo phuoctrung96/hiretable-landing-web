@@ -15,8 +15,8 @@ const Footer: React.FC<FooterProps> = ({ isCircle }) => {
       } bg-[#111111] sm:px-[74px] px-4`}
     >
       {isCircle && (
-        <div className="flex flex-col items-center h-[722px] justify-center">
-          <p className="text-[#FAFAFA] font-bold text-[40px] sm:text-[56px] pt-36 mb-8 text-center">
+        <div className="flex flex-col items-center h-[440px] sm:h-[722px] justify-center">
+          <p className="text-[#FAFAFA] font-bold text-[28px] sm:text-[44px] pt-0 sm:pt-36 mb-8 text-center">
             Start winning your candidates
           </p>
           <div className="flex h-[164px] w-[164px] items-center">
@@ -42,11 +42,11 @@ const Footer: React.FC<FooterProps> = ({ isCircle }) => {
       <div className="w-full pt-8">
         <div className="flex flex-col max-w-[1200px] m-auto">
           <Image src="/logo.svg" alt="logo" width={98} height={34} />
-          <div className=" grid  grid-cols-2 sm:grid-cols-4 items-center justify-between mt-16  mb-16">
+          <div className="grid grid-cols-2 sm:grid-cols-4 items-center justify-between mt-16 mb-10">
             {FooterContent.map((section, index) => (
               <div
                 key={index}
-                className={`flex sm:items-center ${
+                className={`flex sm:items-center mb-6 ${
                   index === 0
                     ? 'sm:justify-start'
                     : index === 3

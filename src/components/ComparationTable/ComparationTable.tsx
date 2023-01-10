@@ -22,12 +22,18 @@ const ComparationTable: React.FC<{ data: any }> = ({ data }) => {
                   </div>
                   <p className="font-medium text-base text-gray-400">/mo</p>
                 </div>
-                <p className="text-gray-400 font-medium  text-base mb-3">
+                <p className="text-gray-400 font-medium text-base mb-3">
                   billed yearly
                 </p>
               </>
             )}
-            <p className=" text-center text-base font-medium ">{item.desc}</p>
+            <p
+              className={`text-center text-base font-medium ${
+                item.title === 'Starter' ? 'px-3' : ''
+              }`}
+            >
+              {item.desc}
+            </p>
           </div>
         ))}
       </div>

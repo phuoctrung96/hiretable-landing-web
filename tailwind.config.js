@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      // colors: {
+      //   'gradient-fom': ''
+      // },
       animation: {
         'spin-slow': 'spin 3s linear infinite',
         fade: 'fadeIn .2s ease-in-out'

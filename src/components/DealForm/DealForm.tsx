@@ -2,7 +2,11 @@
 import React, { useState, ChangeEvent } from 'react';
 import { useRouter } from 'next/router';
 
-const DealForm: React.FC = () => {
+interface DealFormProps {
+  type: string;
+}
+
+const DealForm: React.FC<DealFormProps> = ({ type }) => {
   const router = useRouter();
   const [values, setValues] = useState({
     price: 0,
@@ -71,7 +75,7 @@ const DealForm: React.FC = () => {
                 handleInputChange('price', event.target.value)
               }
               value={values.price}
-              className="text-sm text-[#757575] bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer block w-full pl-3 p-2.5 "
+              className="text-sm text-[#757575] bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-yellow-300 peer block w-full pl-3 p-2.5 "
             />
           </div>
         </div>
@@ -91,7 +95,7 @@ const DealForm: React.FC = () => {
                 handleInputChange('locationCount', event.target.value)
               }
               value={values.locationCount}
-              className="text-sm text-[#757575] bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer block w-full pl-3 p-2.5 "
+              className="text-sm text-[#757575] bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-yellow-300 peer block w-full pl-3 p-2.5 "
             />
           </div>
         </div>
@@ -108,7 +112,7 @@ const DealForm: React.FC = () => {
                 handleInputChange('firstName', event.target.value)
               }
               value={values.firstName}
-              className="text-sm text-[#757575] bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer block w-full p-2.5 "
+              className="text-sm text-[#757575] bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-yellow-300 peer block w-full p-2.5 "
             />
           </div>
         </div>
@@ -125,7 +129,7 @@ const DealForm: React.FC = () => {
                 handleInputChange('lastName', event.target.value)
               }
               value={values.lastName}
-              className="text-sm text-[#757575] bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer block w-full p-2.5 "
+              className="text-sm text-[#757575] bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-yellow-300 peer block w-full p-2.5 "
             />
           </div>
         </div>
@@ -142,7 +146,7 @@ const DealForm: React.FC = () => {
                 handleInputChange('email', event.target.value)
               }
               value={values.email}
-              className="text-sm text-[#757575] bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer block w-full p-2.5 "
+              className="text-sm text-[#757575] bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-yellow-300 peer block w-full p-2.5 "
             />
           </div>
         </div>
@@ -159,7 +163,7 @@ const DealForm: React.FC = () => {
                 handleInputChange('phone', event.target.value)
               }
               value={values.phone}
-              className="text-sm text-[#757575] bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer block w-full p-2.5 "
+              className="text-sm text-[#757575] bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-yellow-300 peer block w-full p-2.5 "
             />
           </div>
         </div>
@@ -176,7 +180,7 @@ const DealForm: React.FC = () => {
                 handleInputChange('url', event.target.value)
               }
               value={values.url}
-              className="text-sm text-[#757575] bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer block w-full p-2.5 "
+              className="text-sm text-[#757575] bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-yellow-300 peer block w-full p-2.5 "
             />
           </div>
         </div>
@@ -190,7 +194,7 @@ const DealForm: React.FC = () => {
           onClick={handleSubmit}
           disabled={!checkFormValidation()}
         >
-          Let's make a deal!
+          {type === 'deal' ? "Let's make a deal!" : 'Contact sales'}
         </button>
       </div>
     </form>

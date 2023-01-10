@@ -3,8 +3,6 @@ import React, { useRef, useState } from 'react';
 import { AiFillPauseCircle } from 'react-icons/ai';
 
 interface VideoProps {
-  // width: number;
-  // height: number;
   url: string;
 }
 const Video: React.FC<VideoProps> = ({ url }) => {
@@ -35,10 +33,7 @@ const Video: React.FC<VideoProps> = ({ url }) => {
     setIsPlay(false);
   };
   return (
-    <div
-      className="relative group aspect-9/16"
-      // style={{ height: `${height}px` }}
-    >
+    <div className="relative group aspect-9/16 w-full">
       {!isUseButton ? (
         <button
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
@@ -61,6 +56,7 @@ const Video: React.FC<VideoProps> = ({ url }) => {
           <AiFillPauseCircle className="opacity-80" size={96} color="#F2F2F2" />
         </button>
       )}
+      <div className="h-full w-full absolute"></div>
       <video
         ref={el => {
           videoRef.current = el as HTMLVideoElement;
@@ -68,7 +64,7 @@ const Video: React.FC<VideoProps> = ({ url }) => {
         loop
         onMouseEnter={handlePlay}
         onMouseLeave={handlePause}
-        className="flex justify-center items-center rounded-[32px] sm:rounded-[64px]  h-full object-cover"
+        className="flex justify-center items-center rounded-[32px] sm:rounded-[64px] h-full object-cover"
         src={url}
       >
         <source src={url} type="video/mp4" />

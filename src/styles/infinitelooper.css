@@ -19,8 +19,8 @@
   width: fit-content;
 }
 
-.looper__innerList[data-animate="true"] .looper__listInstance {
-  animation: slideAnim linear infinite;   
+.looper__innerList[data-animate='true'] .looper__listInstance {
+  animation: slideAnim linear infinite;
 }
 
 .looper__listInstance {
@@ -30,10 +30,34 @@
   animation: none;
 }
 
-  .contentBlock img {
-    width: 192px;
-    height: 192px;
-    margin: 20px;
-    opacity: 0.5;
-    border-radius: 16px;
-  }
+.left-gradient {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 4;
+  width: 15%;
+  background: linear-gradient(90deg, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, 0.86) 64.06%);
+  transform: rotate(-180deg);
+}
+
+.right-gradient {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 4;
+  width: 15%;
+  background: linear-gradient(90deg, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, 0.86) 64.06%);
+}
+
+.contentBlock {
+  width: 192px;
+  height: 192px;
+  margin: 20px;
+  opacity: 0.3;
+  border-radius: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
